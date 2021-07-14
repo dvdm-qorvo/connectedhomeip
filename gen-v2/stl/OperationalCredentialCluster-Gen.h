@@ -21,8 +21,7 @@ namespace OperationalCredentialCluster {
             kFieldIdAdminVendorId = 3
         };
         
-        class Type : public IEncodableElement {
-            public:
+        struct Type : public IEncodableElement {
                 std::vector<uint8_t> noc;
                 std::vector<uint8_t> ipkValue;
                 chip::NodeId caseAdminNode;
@@ -31,7 +30,6 @@ namespace OperationalCredentialCluster {
                 static chip::ClusterId GetClusterId() { return kClusterId; }
                 static uint16_t GetCommandId() { return 0x06; }
 
-            public:
                 CHIP_ERROR Encode(TLV::TLVWriter &writer, uint64_t tag) final; 
                 CHIP_ERROR Decode(TLV::TLVReader &reader) final;
         };
@@ -44,8 +42,7 @@ namespace OperationalCredentialCluster {
             kFieldIdDebugText = 2
         };
         
-        class Type : public IEncodableElement {
-            public:
+        struct Type : public IEncodableElement {
                 int8_t statusCode;
                 int64_t fabricIndex;
                 std::string debugText;
@@ -58,7 +55,6 @@ namespace OperationalCredentialCluster {
                 //
                 static chip::CommandId GetCommandId() { return 0x06; }
                 
-            public:
                 CHIP_ERROR Encode(TLV::TLVWriter &writer, uint64_t tag) final; 
                 CHIP_ERROR Decode(TLV::TLVReader &reader) final;
         };
@@ -69,14 +65,12 @@ namespace OperationalCredentialCluster {
             kFieldIdCsrNonce = 0
         };
         
-        class Type : public IEncodableElement {
-            public:
+        struct Type : public IEncodableElement {
                 std::vector<uint8_t> csrNonce;
 
                 static chip::ClusterId GetClusterId() { return kClusterId; }
                 static chip::CommandId GetCommandId() { return 0x04; }
 
-            public:
                 CHIP_ERROR Encode(TLV::TLVWriter &writer, uint64_t tag) final; 
                 CHIP_ERROR Decode(TLV::TLVReader &reader) final;
         };
@@ -92,8 +86,7 @@ namespace OperationalCredentialCluster {
             kFieldIdSignature = 5
         };
         
-        class Type : public IEncodableElement {
-            public:
+        struct Type : public IEncodableElement {
                 std::vector<uint8_t> csr;
                 std::vector<uint8_t> csrNonce;
                 std::vector<uint8_t> vendorReserved1;
@@ -104,7 +97,6 @@ namespace OperationalCredentialCluster {
                 static chip::ClusterId GetClusterId() { return kClusterId; }
                 static chip::CommandId GetCommandId() { return 0x05; }
 
-            public:
                 CHIP_ERROR Encode(TLV::TLVWriter &writer, uint64_t tag) final; 
                 CHIP_ERROR Decode(TLV::TLVReader &reader) final;
         };

@@ -332,7 +332,7 @@ void TestInvokeInteraction::TestInvokeInteractionSimple(nlTestSuite * apSuite, v
         chip::TLV::Utilities::Print(reader);
         buf = reader.GetBackingStore().Release();
     }
-
+    
     invokeInitiator->GetInitiator().OnMessageReceived(invokeInitiator->GetInitiator().GetExchange(), PacketHeader(), PayloadHeader(), std::move(buf));
     NL_TEST_ASSERT(apSuite, gTestInvoke.mGotCommandB == 2);
 }

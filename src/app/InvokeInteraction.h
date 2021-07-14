@@ -393,7 +393,11 @@ exit:
      * @brief
      *
      * Increments the hold-off ref, signalling to the responder object that it should not dispatch any queued up responses till a 
-     * matching call to DecrementHoldOffRef() has been made.
+     * matching call to DecrementHoldOffRef() has been made. This also prevents the de-allocation of this object till the matching call
+     * has been made.
+     *
+     * If the caller of this method encounters any errors, it should call DecrementHoldOffRef() to safely permit the dispach of other responses
+     * on this object despite its own failure. Failure to do so will prevent futher work on this object.
      */
     void IncrementHoldOffRef();
 
@@ -401,7 +405,7 @@ exit:
      * @brief
      *
      * Decrements the hold-off ref. If it hits 0, any queued up responses that have been encoded into a response packet buffer are immediately
-     * transmitted, before this object is moved back to an idle state.
+     * transmitted, before this object is released/destructed.
      */
     void DecrementHoldOffRef();
 

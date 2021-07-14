@@ -12,16 +12,15 @@ namespace NetworkCommissioningCluster {
         constexpr int NumImplementedFields = GetNumImplementedFields(_Schema);
         extern const StructDescriptor<NumImplementedFields> Descriptor;
         
-        class Type {
-            public:
-                chip::ClusterId GetClusterId() { return kClusterId; }
-                chip::CommandId GetCommandId() { return kAddThreadNetworkRequestCommandId; }
-                
-                chip::ByteSpan OperationalDataSet;
-                uint64_t Breadcrumb;
-                uint32_t TimeoutMs; 
-                
-                static const StructDescriptor<NumImplementedFields> &mDescriptor;
+        struct Type {
+            chip::ByteSpan OperationalDataSet;
+            uint64_t Breadcrumb;
+            uint32_t TimeoutMs; 
+
+            chip::ClusterId GetClusterId() { return kClusterId; }
+            chip::CommandId GetCommandId() { return kAddThreadNetworkRequestCommandId; }
+
+            static const StructDescriptor<NumImplementedFields> &mDescriptor;
         };
     }
 
@@ -29,14 +28,13 @@ namespace NetworkCommissioningCluster {
         constexpr int NumImplementedFields = GetNumImplementedFields(_Schema);
         extern const StructDescriptor<NumImplementedFields> Descriptor;
         
-        class Type {
-            public:
-                chip::ByteSpan Ssid;
-                chip::ByteSpan Credentials;
-                uint64_t Breadcrumb;
-                uint32_t TimeoutMs; 
-                
-                static const StructDescriptor<NumImplementedFields> &mDescriptor;
+        struct Type {
+            chip::ByteSpan Ssid;
+            chip::ByteSpan Credentials;
+            uint64_t Breadcrumb;
+            uint32_t TimeoutMs; 
+
+            static const StructDescriptor<NumImplementedFields> &mDescriptor;
         };
     }
     
@@ -44,13 +42,12 @@ namespace NetworkCommissioningCluster {
         constexpr int NumImplementedFields = GetNumImplementedFields(_Schema);
         extern const StructDescriptor<NumImplementedFields> Descriptor;
         
-        class Type {
-            public:
-                chip::ByteSpan NetworkId;
-                uint64_t Breadcrumb;
-                uint32_t TimeoutMs; 
-                
-                static const StructDescriptor<NumImplementedFields> &mDescriptor;
+        struct Type {
+            chip::ByteSpan NetworkId;
+            uint64_t Breadcrumb;
+            uint32_t TimeoutMs; 
+
+            static const StructDescriptor<NumImplementedFields> &mDescriptor;
         };
     }
 }

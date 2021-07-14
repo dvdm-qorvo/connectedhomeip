@@ -26,14 +26,12 @@ namespace TestCluster {
             kFieldIdM = 3
         };
         
-        class Type : public IEncodableElement {
-            public:
+        struct Type : public IEncodableElement {
                 uint8_t x;
                 uint8_t y;
                 std::vector<uint8_t> l;
                 std::string m;
 
-            public:
                 CHIP_ERROR Encode(TLV::TLVWriter &writer, uint64_t tag) final; 
                 CHIP_ERROR Decode(TLV::TLVReader &reader) final;
         };
@@ -46,13 +44,11 @@ namespace TestCluster {
             kFieldIdZ = 2
         };
         
-        class Type : public IEncodableElement {
-            public:
+        struct Type : public IEncodableElement {
                 uint8_t x;
                 uint8_t y;
                 StructA::Type z;
 
-            public:
                 CHIP_ERROR Encode(TLV::TLVWriter &writer, uint64_t tag) final; 
                 CHIP_ERROR Decode(TLV::TLVReader &reader) final;
         };
@@ -67,7 +63,7 @@ namespace TestCluster {
             kFieldIdE = 4,
         };
         
-        class Type : public IEncodableElement {
+        struct Type : public IEncodableElement {
             public:
                 struct empty {};
 
@@ -91,15 +87,15 @@ namespace TestCluster {
             kFieldIdD = 3,
         };
         
-        class Type : public IEncodableElement {
+        struct Type : public IEncodableElement {
             public:
-                static chip::ClusterId GetClusterId() { return kClusterId; }
-                static chip::CommandId GetCommandId() { return kCommandAId; }
-
                 uint8_t a;
                 uint8_t b;
                 StructA::Type c;
                 std::vector<uint8_t> d;
+
+                static chip::ClusterId GetClusterId() { return kClusterId; }
+                static chip::CommandId GetCommandId() { return kCommandAId; }
 
                 CHIP_ERROR Encode(TLV::TLVWriter &writer, uint64_t tag) final; 
                 CHIP_ERROR Decode(TLV::TLVReader &reader) final;
@@ -115,19 +111,17 @@ namespace TestCluster {
             kFieldIdE = 4,
         };
         
-        class Type : public IEncodableElement {
-            public:
-                static chip::ClusterId GetClusterId() { return kClusterId; }
-                static chip::CommandId GetCommandId() { return kCommandBId; }
-                
+        struct Type : public IEncodableElement {
                 struct empty {};
 
-            public:
                 uint8_t a;
                 uint8_t b;
                 StructA::Type c;
                 std::vector<uint8_t> d;
                 std::vector<StructA::Type> e;
+
+                static chip::ClusterId GetClusterId() { return kClusterId; }
+                static chip::CommandId GetCommandId() { return kCommandBId; }
 
                 CHIP_ERROR Encode(TLV::TLVWriter &writer, uint64_t tag) final; 
                 CHIP_ERROR Decode(TLV::TLVReader &reader) final;

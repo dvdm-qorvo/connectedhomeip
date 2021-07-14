@@ -11,10 +11,10 @@ namespace TestCluster {
 
             uint32_t i = 0;
 
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, x), sizeof(Type::x)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, y), sizeof(Type::y)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, l), sizeof(uint8_t)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, m), sizeof(char)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, x), sizeof(Type::x)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, y), sizeof(Type::y)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, l), sizeof(uint8_t)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, m), sizeof(char)};
 
             return r;
         }
@@ -37,9 +37,9 @@ namespace TestCluster {
 
             uint32_t i = 0;
 
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, x), sizeof(Type::x)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, y), sizeof(Type::y)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, z), sizeof(Type::z)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, x), sizeof(Type::x)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, y), sizeof(Type::y)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, z), sizeof(Type::z)};
 
             return r;
         }
@@ -63,11 +63,11 @@ namespace TestCluster {
 
             uint32_t i = 0;
 
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, a), sizeof(Type::a)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, b), sizeof(Type::b)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, c), sizeof(Type::c)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, d), sizeof(uint8_t)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, e), sizeof(StructA::Type)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, a), sizeof(Type::a)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, b), sizeof(Type::b)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, c), sizeof(Type::c)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, d), sizeof(uint8_t)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, e), sizeof(StructA::Type)};
 
             return r;
         }
@@ -91,10 +91,10 @@ namespace TestCluster {
 
             uint32_t i = 0;
 
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, a), sizeof(Type::a)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, b), sizeof(Type::b)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, c), sizeof(Type::c)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, d), sizeof(uint8_t)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, a), sizeof(Type::a)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, b), sizeof(Type::b)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, c), sizeof(Type::c)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, d), sizeof(uint8_t)};
 
             return r;
         }
@@ -117,11 +117,11 @@ namespace TestCluster {
 
             uint32_t i = 0;
 
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, a), sizeof(Type::a)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, b), sizeof(Type::b)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, c), sizeof(Type::c)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, d), sizeof(uint8_t)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, e), sizeof(StructA::Type)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, a), sizeof(Type::a)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, b), sizeof(Type::b)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, c), sizeof(Type::c)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, d), sizeof(uint8_t)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, e), sizeof(StructA::Type)};
 
             return r;
         }
@@ -145,22 +145,22 @@ namespace TestCluster {
 
             uint32_t i = 0;
 
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, a), sizeof(Type::a)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, b), sizeof(Type::b)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, a), sizeof(Type::a)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, b), sizeof(Type::b)};
 
             if (IsImplemented(FieldC)) {
-                const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, c), sizeof(Type::c)};
+                const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, c), sizeof(Type::c)};
             }
 
             if (IsImplemented(FieldD)) {
-                const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, d), sizeof(Type::d)};
+                const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, d), sizeof(Type::d)};
             }
 
             if (IsImplemented(FieldE)) {
-                const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, e), sizeof(uint8_t)};
+                const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, e), sizeof(uint8_t)};
             }
 
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, f), sizeof(Type::f)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, f), sizeof(Type::f)};
 
             return r;
         }

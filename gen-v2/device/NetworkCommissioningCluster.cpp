@@ -12,9 +12,9 @@ namespace NetworkCommissioningCluster {
 
             uint32_t i = 0;
 
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, OperationalDataSet), sizeof(uint8_t)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, Breadcrumb), sizeof(Type::Breadcrumb)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, TimeoutMs), sizeof(Type::TimeoutMs)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, OperationalDataSet), sizeof(uint8_t)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, Breadcrumb), sizeof(Type::Breadcrumb)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, TimeoutMs), sizeof(Type::TimeoutMs)};
 
             return r;
         }
@@ -36,10 +36,10 @@ namespace NetworkCommissioningCluster {
 
             uint32_t i = 0;
 
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, Ssid), sizeof(uint8_t)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, Credentials), sizeof(uint8_t)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, Breadcrumb), sizeof(Type::Breadcrumb)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, TimeoutMs), sizeof(Type::TimeoutMs)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, Ssid), sizeof(uint8_t)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, Credentials), sizeof(uint8_t)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, Breadcrumb), sizeof(Type::Breadcrumb)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, TimeoutMs), sizeof(Type::TimeoutMs)};
 
             return r;
         }
@@ -62,9 +62,9 @@ namespace NetworkCommissioningCluster {
 
             uint32_t i = 0;
 
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, NetworkId), sizeof(uint8_t)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, Breadcrumb), sizeof(Type::Breadcrumb)};
-            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(class Type, TimeoutMs), sizeof(Type::TimeoutMs)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, NetworkId), sizeof(uint8_t)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, Breadcrumb), sizeof(Type::Breadcrumb)};
+            const_cast<typename result_t::reference>(const_r[i++]) = {offsetof(struct Type, TimeoutMs), sizeof(Type::TimeoutMs)};
 
             return r;
         }
