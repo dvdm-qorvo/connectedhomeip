@@ -1215,7 +1215,7 @@ CHIP_ERROR DeviceCommissioner::SendOperationalCertificateSigningRequestCommand(D
 
 void DeviceCommissioner::OnCSRFailureResponse(app::DemuxedInvokeInitiator& invokeInitiator, CHIP_ERROR error, chip::app::StatusResponse *response)
 {
-    ChipLogProgress(Controller, "Device failed to receive the CSR request Response: 0x%04x", error);
+    ChipLogProgress(Controller, "Device failed to receive the CSR request Response: %s", ErrorStr(error));
     OnSessionEstablishmentError(error);
 }
 
@@ -1357,7 +1357,7 @@ CHIP_ERROR DeviceCommissioner::SendOperationalCertificate(Device * device, const
 
 void DeviceCommissioner::OnAddOpCertFailureResponse(app::DemuxedInvokeInitiator& invokeInitiator, CHIP_ERROR error, chip::app::StatusResponse *response)
 {
-    ChipLogProgress(Controller, "Device failed to receive the operational certificate Response: 0x%04x", error);
+    ChipLogProgress(Controller, "Device failed to receive the operational certificate Response: %s", ErrorStr(error));
     OnSessionEstablishmentError(error);
 }
 

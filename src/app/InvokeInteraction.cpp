@@ -120,7 +120,7 @@ CHIP_ERROR InvokeResponder::Init(Messaging::ExchangeContext *apContext, System::
             });
 
             if (!foundClusterInstance) {
-                ChipLogProgress(DataManagement, "Could not find a matching server cluster for command! (ClusterId = %04x, Endpoint = %lu, Command = %lu)", 
+                ChipLogProgress(DataManagement, "Could not find a matching server cluster for command! (ClusterId = %" PRIx32 ", Endpoint = %lu, Command = %lu)", 
                                 params.ClusterId, (unsigned long)params.EndpointId, (unsigned long)params.CommandId);
 
                 //

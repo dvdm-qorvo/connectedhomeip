@@ -50,6 +50,7 @@
 #include <transport/raw/UDP.h>
 #include <stl/DemuxedInvokeInitiator.h>
 #include <OperationalCredentialCluster-Gen.h>
+#include <memory>
 
 #if CONFIG_DEVICE_LAYER
 #include <platform/CHIPDeviceLayer.h>

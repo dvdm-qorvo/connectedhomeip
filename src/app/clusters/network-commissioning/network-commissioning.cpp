@@ -164,7 +164,7 @@ CHIP_ERROR NetworkCommissioningServer::AddThreadNetwork(NetworkCommissioningClus
 
 exit:
     // TODO: We should encode response command here.
-    ChipLogDetail(Zcl, "AddThreadNetwork: %" PRIu8, err);
+    ChipLogFunctError(err);
     return err;
 #else
     // The target does not supports ThreadNetwork. We should not add AddThreadNetwork command in that case then the upper layer will

@@ -56,7 +56,7 @@ void DemuxedInvokeInitiator::OnResponse(InvokeInitiator &initiator, CommandParam
     }
 
     if (!foundMatch) {
-        ChipLogProgress(DataManagement, "Could not find a matching demuxed handler for command! (ClusterId = %04x, Endpoint = %lu, Command = %lu)", 
+        ChipLogProgress(DataManagement, "Could not find a matching demuxed handler for command! (ClusterId = %" PRIx32 ", Endpoint = %lu, Command = %lu)", 
                         params.ClusterId, (unsigned long)params.EndpointId, (unsigned long)params.CommandId);
     }           
 }
